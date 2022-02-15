@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment, double } from './counterSlice';
+import { decrement, increment, double, reset } from './counterSlice';
 
 const Counter = () => {
   // The function below is called a selector and allows us to select a value
@@ -35,6 +35,15 @@ const Counter = () => {
         }}
       >
         *
+      </button>
+
+      <button
+        aria-label="reset"
+        onClick={() => {
+          dispatch(reset());
+        }}
+      >
+        reset
       </button>
     </div>
   );

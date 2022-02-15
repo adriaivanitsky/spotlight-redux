@@ -20,10 +20,13 @@ export const counterSlice = createSlice({
     double: (state) => {
       state.count += 1 * 2;
     },
+    reset: (state) => {
+      state.count = 0;
+    },
   },
 });
 
-export const { increment, decrement, double } = counterSlice.actions;
+export const { increment, decrement, double, reset } = counterSlice.actions;
 
 //Export the reducer function from the slice
 export default counterSlice.reducer;
